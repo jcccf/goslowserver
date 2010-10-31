@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  red: 1
+  green: 1
+  blue: 1
+
+two:
+  user_id: 1
+  red: 1
+  green: 1
+  blue: 1

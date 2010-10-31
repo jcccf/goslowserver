@@ -1,0 +1,2 @@
+module PhotoReflectionsHelper
+end

@@ -1,0 +1,29 @@
+<h1>Listing color_reflections</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Red</th>
+    <th>Green</th>
+    <th>Blue</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @color_reflections.each do |color_reflection| %>
+  <tr>
+    <td><%= color_reflection.user_id %></td>
+    <td><%= color_reflection.red %></td>
+    <td><%= color_reflection.green %></td>
+    <td><%= color_reflection.blue %></td>
+    <td><%= link_to 'Show', color_reflection %></td>
+    <td><%= link_to 'Edit', edit_color_reflection_path(color_reflection) %></td>
+    <td><%= link_to 'Destroy', color_reflection, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Color reflection', new_color_reflection_path %>

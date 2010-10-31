@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @text_reflection.user_id %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @text_reflection.text %>
+</p>
+
+
+<%= link_to 'Edit', edit_text_reflection_path(@text_reflection) %> |
+<%= link_to 'Back', text_reflections_path %>

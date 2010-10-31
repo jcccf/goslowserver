@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @color_reflection.user_id %>
+</p>
+
+<p>
+  <b>Red:</b>
+  <%= @color_reflection.red %>
+</p>
+
+<p>
+  <b>Green:</b>
+  <%= @color_reflection.green %>
+</p>
+
+<p>
+  <b>Blue:</b>
+  <%= @color_reflection.blue %>
+</p>
+
+
+<%= link_to 'Edit', edit_color_reflection_path(@color_reflection) %> |
+<%= link_to 'Back', color_reflections_path %>

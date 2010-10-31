@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @photo_reflection.user_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @photo_reflection.name %>
+</p>
+
+<p>
+  <b>Content type:</b>
+  <%= @photo_reflection.content_type %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @photo_reflection.data %>
+</p>
+
+
+<%= link_to 'Edit', edit_photo_reflection_path(@photo_reflection) %> |
+<%= link_to 'Back', photo_reflections_path %>
