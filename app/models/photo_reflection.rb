@@ -1,5 +1,6 @@
 class PhotoReflection < ActiveRecord::Base
   belongs_to :user
+  has_one :suggestion
 
   validates_format_of :content_type, :with => /^image/,
                       :message             => "--- you can only upload pictures"

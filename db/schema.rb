@@ -10,18 +10,57 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101027043222) do
+ActiveRecord::Schema.define(:version => 20101101172536) do
 
-# Could not dump table "color_reflections" because of following ArgumentError
-#   invalid date
+  create_table "color_reflections", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "red"
+    t.integer  "green"
+    t.integer  "blue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
-# Could not dump table "photo_reflections" because of following ArgumentError
-#   invalid date
+  create_table "log_screens", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "screen_id"
+    t.boolean  "entering"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
-# Could not dump table "text_reflections" because of following ArgumentError
-#   invalid date
+  create_table "photo_reflections", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "content_type"
+    t.binary   "data",         :limit => 16777215
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
-# Could not dump table "users" because of following ArgumentError
-#   invalid date
+  create_table "screens", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "suggestions", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "text_reflections", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "udid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

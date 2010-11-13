@@ -1,4 +1,11 @@
+require 'gs_basic_auth'
+
 class PhotoReflectionsController < ApplicationController
+  
+  include GSBasicAuthentication
+  before_filter :authenticate, :except => [:create]
+  skip_before_filter :verify_authenticity_token, :only => [:create]
+  
   # GET /photo_reflections
   # GET /photo_reflections.xml
   def index
@@ -83,4 +90,6 @@ class PhotoReflectionsController < ApplicationController
       format.xml { head :ok }
     end
   end
+  
+
 end
