@@ -1,0 +1,29 @@
+<h1>Listing log_screens</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Screen</th>
+    <th>Entering</th>
+		<th>Time Entered</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @log_screens.each do |log_screen| %>
+  <tr>
+    <td><%= log_screen.user_id %></td>
+    <td><%= log_screen.screen_id %></td>
+    <td><%= log_screen.entering %></td>
+		<td><%= log_screen.time_entered %></td>
+    <td><%= link_to 'Show', log_screen %></td>
+    <td><%= link_to 'Edit', edit_log_screen_path(log_screen) %></td>
+    <td><%= link_to 'Destroy', log_screen, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Log screen', new_log_screen_path %>

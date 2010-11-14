@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @log_screen.user_id %>
+</p>
+
+<p>
+  <b>Screen:</b>
+  <%= @log_screen.screen_id %>
+</p>
+
+<p>
+  <b>Entering:</b>
+  <%= @log_screen.entering %>
+</p>
+
+<p>
+  <b>Time Entered:</b>
+  <%= @log_screen.time_entered %>
+</p>
+
+<%= link_to 'Edit', edit_log_screen_path(@log_screen) %> |
+<%= link_to 'Back', log_screens_path %>

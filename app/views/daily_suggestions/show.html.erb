@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @daily_suggestion.user_id %>
+</p>
+
+<p>
+  <b>Suggestion:</b>
+  <%= @daily_suggestion.suggestion_id %>
+</p>
+
+<p>
+  <b>Time Entered:</b>
+  <%= @daily_suggestion.time_entered %>
+</p>
+
+
+<%= link_to 'Edit', edit_daily_suggestion_path(@daily_suggestion) %> |
+<%= link_to 'Back', daily_suggestions_path %>

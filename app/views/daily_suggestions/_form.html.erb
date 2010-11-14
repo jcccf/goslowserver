@@ -1,0 +1,35 @@
+<%= form_for(@daily_suggestion) do |f| %>
+  <% if @daily_suggestion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@daily_suggestion.errors.count, "error") %> prohibited this daily_suggestion from being saved:</h2>
+
+      <ul>
+      <% @daily_suggestion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<div class="field">
+    <%= f.label :udid %><br />
+    <%= f.text_field :udid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :suggestion_id %><br />
+    <%= f.text_field :suggestion_id %>
+  </div>
+	<div class="field">
+    <%= f.label :time_entered %><br />
+    <%= f.text_field :time_entered %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
