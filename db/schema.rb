@@ -10,13 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101101172536) do
+ActiveRecord::Schema.define(:version => 20101113174437) do
 
   create_table "color_reflections", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "red"
-    t.integer  "green"
-    t.integer  "blue"
+    t.decimal  "red",        :precision => 8, :scale => 4
+    t.decimal  "green",      :precision => 8, :scale => 4
+    t.decimal  "blue",       :precision => 8, :scale => 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "daily_suggestions", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "suggestion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20101101172536) do
     t.integer  "user_id"
     t.integer  "screen_id"
     t.boolean  "entering"
+    t.datetime "time_entered"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -46,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20101101172536) do
 
   create_table "suggestions", :force => true do |t|
     t.string   "name"
+    t.datetime "time_entered"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

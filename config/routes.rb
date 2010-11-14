@@ -1,4 +1,6 @@
 GoSlow::Application.routes.draw do
+  resources :daily_suggestions
+
   get "welcome/index"
 
   resources :log_screens
