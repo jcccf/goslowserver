@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20101113174437) do
   create_table "daily_suggestions", :force => true do |t|
     t.integer  "user_id"
     t.integer  "suggestion_id"
+    t.datetime "time_entered"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

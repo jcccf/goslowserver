@@ -3,6 +3,7 @@ class CreateDailySuggestions < ActiveRecord::Migration
     create_table :daily_suggestions do |t|
       t.integer :user_id
       t.integer :suggestion_id
+      t.timestamp :time_entered
 
       t.timestamps
     end
